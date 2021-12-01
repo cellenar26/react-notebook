@@ -4,15 +4,22 @@ import MyComponent from './MyComponent';
 import Counter from './Counter';
 import Say from './Say';
 import EventPractice from './EventPractice';
+import ValidationSample from './ValidationSample';
+import ScrollBox from './ScrollBox';
+import { Component } from 'react';
 
-function App() {
-  const number = 0;
-  return (
+class App extends Component {
 
-    <EventPractice />
+  render() {
+    return (
+      <div>
+        <ScrollBox ref={ref => this.scrollBox = ref} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>to bottom</button>
+      </div>
 
 
-  );
+    );
+  }
 }
 
 export default App;
