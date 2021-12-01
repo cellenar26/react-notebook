@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import MyComponent from './MyComponent';
 
 function App() {
   const number = 0;
   return (
 
-      number && <h1>Hello</h1>
+      <MyComponent name={3}>this is children props</MyComponent>
 
 
   );
