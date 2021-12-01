@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 
-const MyComponent = ({name, children, favoriteNumber}) => {
-    return <div>
-        this is my name {name} <br >
-        </br>
-        children: {children}
-        <br />
-        my best number: {favoriteNumber}
-        </div>
-}
+class MyComponent extends Component  {
+    static defaultProps = {
+        name: 'base name'
+    }
 
-MyComponent.defaultProps = {
-    name: 'basename'
-}
-
-MyComponent.propTypes = {
-    name: PropTypes.string,
-    favoriteNumber: PropTypes.number.isRequired
+    static propTypes = {
+        name: PropTypes.string,
+        favoriteNumber: PropTypes.number.isRequired
+    }
+    render() {
+        const {name, favoriteNumber, children} = this.props
+        return (
+            <div>
+                hello this my name : {name} <br />
+                children v: {children} <br />
+                my favorite number: {favoriteNumber}
+            </div>
+        )
+    }
 }
 
 export default MyComponent;

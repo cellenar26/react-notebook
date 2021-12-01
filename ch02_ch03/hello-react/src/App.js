@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import MyComponent from './MyComponent';
+import Counter from './Counter';
 
 function App() {
   const number = 0;
   return (
 
-      <MyComponent name={3}>this is children props</MyComponent>
+    <Counter />
 
 
   );
