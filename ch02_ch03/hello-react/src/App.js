@@ -6,20 +6,22 @@ import Say from './Say';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
 import ScrollBox from './ScrollBox';
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import IterationSample from './IterationSample';
+import Info from './Info';
+import Average from './Average';
 
-class App extends Component {
+const App = () => {
 
-  render() {
-    return (
-      <div>
-        <IterationSample />
-      </div>
+  const [visible, setVisible] = useState(false)
+  return (
+    <div>
+      <Average />
+    </div>
 
 
-    );
-  }
+  );
+
 }
 
 export default App;
